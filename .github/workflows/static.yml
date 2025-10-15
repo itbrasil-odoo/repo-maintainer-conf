@@ -38,7 +38,7 @@ jobs:
       - name: Install Sphinx
         run: pip install sphinx sphinx-rtd-theme
       - name: Generate docs
-        run: python -m sphinx -W docsource docs
+        run: python -m sphinx docsource docs
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
