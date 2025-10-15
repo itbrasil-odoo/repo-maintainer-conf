@@ -32,9 +32,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Requirment
-        run: pip install https://github.com/OCA/repo-maintainer/archive/master.zip
+        run: pip install https://github.com/itbrasil-odoo/maintainer-tools/archive/master.zip
       - name: Generate RST
-        run: oca-repo-pages --org $GITHUB_REPOSITORY_OWNER --conf-dir conf --path docsource 
+        run: itbr-repo-pages --org $GITHUB_REPOSITORY_OWNER --conf-dir conf --path docsource 
       - name: Generate docs
         run: python -m sphinx -W docsource docs
       - name: Setup Pages

@@ -19,15 +19,15 @@ jobs:
         with:
           python-version: "3.10"
       - name: Install requirements
-        run: pip install https://github.com/OCA/repo-maintainer/archive/master.zip
+        run: pip install https://github.com/itbrasil-odoo/maintainer-tools/archive/master.zip
       - name: Manage repositories
         run:
-          oca-repo-manage --org $GITHUB_REPOSITORY_OWNER --token ${{secrets.GIT_PUSH_TOKEN}} --conf-dir ./conf
+          itbr-repo-manage --org $GITHUB_REPOSITORY_OWNER --token ${{secrets.GIT_PUSH_TOKEN}} --conf-dir ./conf
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update checksum
           file_pattern: "conf/checksum.yml"
-          commit_user_name: OCA-git-bot
-          commit_user_email: oca-git-bot@odoo-community.org
-          commit_author: OCA-git-bot <oca-git-bot@odoo-community.org>
+          commit_user_name: ITBR-git-bot
+          commit_user_email: itbr-git-bot@itbrasil.com.br
+          commit_author: ITBR-git-bot <itbr-git-bot@itbrasil.com.br>
 
