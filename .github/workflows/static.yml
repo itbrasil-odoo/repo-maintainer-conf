@@ -36,7 +36,7 @@ jobs:
       - name: Generate RST
         run: itbr-repo-pages --org $GITHUB_REPOSITORY_OWNER --conf-dir conf --path docsource 
       - name: Install Sphinx
-        run: pip install sphinx
+        run: pip install sphinx sphinx-rtd-theme
       - name: Generate docs
         run: python -m sphinx -W docsource docs
       - name: Setup Pages
