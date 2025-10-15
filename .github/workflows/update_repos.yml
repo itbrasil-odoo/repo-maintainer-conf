@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: "3.10"
       - name: Install requirements
-        run: pip install https://github.com/itbrasil-odoo/maintainer-tools/archive/master.zip
+        run: pip install git+https://github.com/itbrasil-odoo/maintainer-tools.git
       - name: Manage repositories
         run:
           itbr-repo-manage --org $GITHUB_REPOSITORY_OWNER --token ${{secrets.GIT_PUSH_TOKEN}} --conf-dir ./conf
