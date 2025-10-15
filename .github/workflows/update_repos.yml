@@ -22,7 +22,7 @@ jobs:
         run: pip install git+https://github.com/itbrasil-odoo/maintainer-tools.git
       - name: Manage repositories
         run: |
-          export GITHUB_TOKEN=${{ secrets.GIT_PUSH_TOKEN }}
+          export GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
           itbr-repo-manage --org $GITHUB_REPOSITORY_OWNER --conf-dir ./conf
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
