@@ -1,12 +1,12 @@
-# OCA repo maintainer configuration
+# IT Brasil repo maintainer configuration
 
-This repo contains configuration files to automatically setup teams and repositories in the OCA organization.
+This repo contains configuration files to automatically setup teams and repositories in the IT Brasil organization.
 
 ## How it works
-When a config change is merged, a Github action will use the [repo-maintainer tool](https://github.com/OCA/repo-maintainer)
+When a config change is merged, a Github action will use the [repo-maintainer tool](https://github.com/itbrasil-odoo/repo-maintainer)
 to update or create teams and repositories and to generate the documentation.
 
-Documentation is hosted on https://oca.github.io/repo-maintainer-conf/
+Documentation is hosted on https://itbrasil-odoo.github.io/repo-maintainer-conf/
 
 ## Conf structure
 
