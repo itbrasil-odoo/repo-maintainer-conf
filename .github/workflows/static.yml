@@ -35,6 +35,8 @@ jobs:
         run: pip install git+https://github.com/itbrasil-odoo/maintainer-tools.git
       - name: Generate RST
         run: itbr-repo-pages --org $GITHUB_REPOSITORY_OWNER --conf-dir conf --path docsource 
+      - name: Install Sphinx
+        run: pip install sphinx
       - name: Generate docs
         run: python -m sphinx -W docsource docs
       - name: Setup Pages
